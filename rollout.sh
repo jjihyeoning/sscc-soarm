@@ -15,8 +15,7 @@ DISPLAY=false
 ROBOT_PORT="/dev/ttyACM0"
 ROBOT_ID="so101_follower_arm"
 
-# 태스크
-TASK="Pick a pink ball and put it on the hand"
+
 
 
 echo
@@ -37,7 +36,7 @@ python "$SCRIPT" \
   --robot.port="$ROBOT_PORT" \
   --robot.id="$ROBOT_ID" \
   --robot.cameras="{top: {type: opencv, index_or_path: $TOP, width: 640, height: 480, fps: 30}, gripper: {type: opencv, index_or_path: $GRIPPER, width: 640, height: 480, fps: 30}}" \
-  --task="$TASK" \
+  --task="Pick a pink ball and put it on the hand" \
   --duration=0 \
   --display_data="$DISPLAY" \
   --inference.type=rtc
